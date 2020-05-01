@@ -1,0 +1,18 @@
+---
+- name: ensure mosh package
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ mosh_package_name }}"
+        state: "{{ mosh_package_state }}"
+  when: not mosh_package_version
+
+- name: ensure mosh package with version
+  include_role:
+    name: "damex.package"
+  vars:
+    package_packages:
+      - name: "{{ mosh_package_name }}-{{ mosh_package_version }}"
+        state: "{{ mosh_package_state }}"
+  when: mosh_package_version | length
