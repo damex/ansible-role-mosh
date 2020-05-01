@@ -1,0 +1,6 @@
+---
+- name: ensure mosh
+  block:
+    - import_tasks: package.yml
+  tags:
+    - mosh

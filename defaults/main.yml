@@ -1,0 +1,4 @@
+---
+mosh_package_name: "mosh"
+mosh_package_version: ""
+mosh_package_state: "present"
